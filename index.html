@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>slaughter страница загрузки</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    animation: backgroundChange 20s infinite;
+    animation: fadeTransition 20s infinite;
+  }
+
+  @keyframes backgroundChange {
+    1% { background-image: url('https://i.postimg.cc/vTqy6ZqN/poster-23-04-27-18-09-09.png'); }
+    15% { background-image: url('https://i.postimg.cc/3N7NZNZr/20230427172724-1.jpg'); }
+    30% { background-image: url('https://i.postimg.cc/t4fgM2zM/poster-23-04-27-19-03-27.png'); }
+    45% { background-image: url('https://i.postimg.cc/d0y0PrHt/poster-23-04-27-19-26-37.png'); }
+    65% { background-image: url('https://i.postimg.cc/Wz3LjPN6/poster-23-04-27-20-06-01.png'); }
+    85% { background-image: url('https://i.postimg.cc/vTqy6ZqN/poster-23-04-27-18-09-09.png'); }
+    100% { background-image: url('https://i.postimg.cc/qvDwjsZ9/9k.png'); }
+  }
+
+  @keyframes fadeTransition {
+    1% { background-image: url('https://i.postimg.cc/vTqy6ZqN/poster-23-04-27-18-09-09.png'); }
+    15% { background-image: url('https://i.postimg.cc/3N7NZNZr/20230427172724-1.jpg'); }
+    30% { background-image: url('https://i.postimg.cc/t4fgM2zM/poster-23-04-27-19-03-27.png'); }
+    45% { background-image: url('https://i.postimg.cc/d0y0PrHt/poster-23-04-27-19-26-37.png'); }
+    65% { background-image: url('https://i.postimg.cc/Wz3LjPN6/poster-23-04-27-20-06-01.png'); }
+    85% { background-image: url('https://i.postimg.cc/vTqy6ZqN/poster-23-04-27-18-09-09.png'); }
+    100% { background-image: url('https://i.postimg.cc/qvDwjsZ9/9k.png'); }
+  }
+
+  .moving-image {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('https://i.postimg.cc/XvfpB9w1/6.png');
+    background-size: cover;
+    animation: moveImage 5s infinite;
+  }
+
+  @keyframes moveImage {
+    0% { transform: translate(-50%, -50%) translateX(-2px); }
+    50% { transform: translate(-50%, -50%) translateX(2px); }
+    100% { transform: translate(-50%, -50%) translateX(-2px); }
+  }
+
+  .additional-image {
+    width: 330px;
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url('https://i.postimg.cc/NG1dD0c3/Whats-App-2024-07-04-15-43-02-16439ac2.jpg');
+    background-size: cover;
+    animation: disappear 1s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes disappear {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+  <audio autoplay="" loop="">
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+  <div class="background"></div>
+  <div class="moving-image"></div>
+  <div class="additional-image"></div>
+  <div class="new-image"></div>
+</body>
+</html>
